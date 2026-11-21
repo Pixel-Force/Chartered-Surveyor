@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instant Survey Fee Calculator & Booking Engine — Chartered Surveyor</title>
+  <meta name="description" content="Calculate a guaranteed fixed fee for RICS Level 1, 2, and 3 Home Surveys. Real-time pricing with VAT breakdown, add-on packages, and direct booking.">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23c5a059'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <aside class="top-bar">
+    <div class="container">
+      <div class="top-bar-content">
+        <div class="top-bar-left">
+          <div class="top-bar-item">
+            <span class="top-bar-badge">RICS Regulated Firm</span>
+            <span>Firm Reg. No: <strong>#849201</strong></span>
+          </div>
+          <div class="top-bar-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <span>Valuer Registration Scheme (VRS) Certified</span>
+          </div>
+        </div>
+        <div class="top-bar-right">
+          <div class="top-bar-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>Direct Surveyor Line: <a href="tel:+442079460920"><strong>+44 (0)20 7946 0920</strong></a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Navigation Header -->
+  <header class="main-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="Chartered Surveyor Home">
+        <div class="brand-crest">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+            <path d="M2 17l10 5 10-5"></path>
+            <path d="M2 12l10 5 10-5"></path>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">Chartered <span>Surveyor</span></span>
+          <span class="brand-tagline">RICS Regulated Independent Practice</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+        <div class="nav-item"><a href="about.html" class="nav-link">About Us</a></div>
+        <div class="nav-item">
+          <a href="surveys.html" class="nav-link">
+            <span>Home Surveys</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="surveys.html#level1" class="dropdown-link">RICS Level 1 Condition</a>
+            <a href="surveys.html#level2" class="dropdown-link">RICS Level 2 Homebuyer</a>
+            <a href="surveys.html#level3" class="dropdown-link">RICS Level 3 Full Building</a>
+            <a href="surveys.html#comparison" class="dropdown-link">Comparison Matrix & Guide</a>
+            <a href="sample-reports.html" class="dropdown-link">Sample Survey Reports</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="services.html" class="nav-link">
+            <span>Specialist Services</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="services.html#commercial" class="dropdown-link">Commercial Due Diligence</a>
+            <a href="services.html#party-wall" class="dropdown-link">Party Wall etc. Act 1996</a>
+            <a href="services.html#dilapidations" class="dropdown-link">Dilapidations & Schedules</a>
+            <a href="services.html#drone" class="dropdown-link">Drone Aerial Roof Surveys</a>
+            <a href="services.html#defects" class="dropdown-link">Structural Defect Diagnosis</a>
+          </div>
+        </div>
+        <div class="nav-item"><a href="valuation.html" class="nav-link">Valuations</a></div>
+        <div class="nav-item"><a href="case-studies.html" class="nav-link">Case Studies</a></div>
+        <div class="nav-item"><a href="fee-calculator.html" class="nav-link active">Fee Calculator</a></div>
+        <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+      </nav>
+
+      <div class="header-actions">
+        <a href="fee-calculator.html" class="btn btn-primary btn-sm">
+          <span>Instant Quote</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+        <button type="button" class="mobile-nav-toggle" aria-label="Toggle navigation menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="section section-dark" style="background: linear-gradient(rgba(6, 17, 32, 0.9), rgba(11, 31, 58, 0.85)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat; padding: 4.5rem 0;">
+    <div class="container text-center" style="max-width: 860px; margin: 0 auto;">
+      <span class="section-badge">Live Quotation Engine</span>
+      <h1 style="color: #ffffff; margin-bottom: 1.25rem;">Instant <span>Survey Fee</span> Calculator</h1>
+      <p style="color: var(--text-inverse-muted); font-size: 1.15rem; line-height: 1.7;">
+        Generate a guaranteed, transparent fixed-price quotation for your property in seconds. All quotations include VAT and full telephone consultation with your MRICS surveyor.
+      </p>
+    </div>
+  </section>
+
+  <!-- CALCULATOR SECTION -->
+  <section class="section" style="background-color: var(--color-bg-dark); color: #ffffff; padding: 4rem 0;">
+    <div class="container">
+      <div class="calculator-card" style="margin-top: 0;">
+        <div class="calc-grid">
+
+          <!-- Left Configuration Form -->
+          <div class="calc-controls">
+            <h3 class="calc-title">Configure Your Property Parameters</h3>
+            <p class="calc-subtitle">Adjust the controls to match the prospective property specifications.</p>
+
+            <!-- Step 1: Purchase Price -->
+            <div class="calc-step">
+              <span class="calc-step-label">1. Property Purchase Price / Estimated Value</span>
+              <div class="slider-value-display">
+                <span style="font-size: 0.88rem; color: #94a3b8;">Valuation:</span>
+                <span class="val-badge" id="calc-val-display">£450,000</span>
+              </div>
+              <input type="range" id="calc-val-slider" class="calc-range-slider" min="150000" max="2500000" step="25000" value="450000">
+              <div class="flex justify-between" style="font-size: 0.75rem; color: #64748b; margin-top: 0.5rem;">
+                <span>£150,000</span>
+                <span>£1,250,000</span>
+                <span>£2,500,000+</span>
+              </div>
+            </div>
+
+            <!-- Step 2: Survey Level Selection -->
+            <div class="calc-step">
+              <span class="calc-step-label">2. Select Desired Survey Level</span>
+              <div class="radio-pill-group">
+                <div class="radio-pill">
+                  <input type="radio" name="calc_survey_type" id="calc-type-1" value="level1">
+                  <label for="calc-type-1">
+                    <span>RICS Level 1</span>
+                    <small style="color: #94a3b8; font-weight: normal; margin-top: 2px;">Condition Report</small>
+                  </label>
+                </div>
+                <div class="radio-pill">
+                  <input type="radio" name="calc_survey_type" id="calc-type-2" value="level2">
+                  <label for="calc-type-2">
+                    <span>RICS Level 2</span>
+                    <small style="color: #94a3b8; font-weight: normal; margin-top: 2px;">Homebuyer Survey</small>
+                  </label>
+                </div>
+                <div class="radio-pill">
+                  <input type="radio" name="calc_survey_type" id="calc-type-3" value="level3" checked>
+                  <label for="calc-type-3">
+                    <span>RICS Level 3</span>
+                    <small style="color: #94a3b8; font-weight: normal; margin-top: 2px;">Building Survey</small>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3: Bedrooms & Age -->
+            <div class="calc-step">
+              <span class="calc-step-label">3. Number of Bedrooms & Era</span>
+              <div class="grid grid-cols-2" style="gap: 1rem;">
+                <div class="radio-pill-group" style="grid-template-columns: repeat(4, 1fr);">
+                  <div class="radio-pill">
+                    <input type="radio" name="calc_beds" id="bed-1" value="1">
+                    <label for="bed-1">1-2</label>
+                  </div>
+                  <div class="radio-pill">
+                    <input type="radio" name="calc_beds" id="bed-3" value="3" checked>
+                    <label for="bed-3">3</label>
+                  </div>
+                  <div class="radio-pill">
+                    <input type="radio" name="calc_beds" id="bed-4" value="4">
+                    <label for="bed-4">4</label>
+                  </div>
+                  <div class="radio-pill">
+                    <input type="radio" name="calc_beds" id="bed-5" value="5">
+                    <label for="bed-5">5+</label>
+                  </div>
+                </div>
+
+                <select id="calc-era-select" class="form-select" style="background-color: #142e50; border-color: var(--border-dark); color: #ffffff;">
+                  <option value="modern">Built Post-1990</option>
+                  <option value="1900-1960" selected>Built 1900 - 1989</option>
+                  <option value="pre-1900">Pre-1900 Victorian/Period</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Step 4: Add-on Inspections -->
+            <div class="calc-step" style="margin-bottom: 0;">
+              <span class="calc-step-label">4. Optional Forensic Add-On Packages</span>
+              
+              <label class="addon-item">
+                <div class="addon-left">
+                  <input type="checkbox" id="addon-drone" data-price="120">
+                  <div>
+                    <div class="addon-name">High-Definition 4K Drone Aerial Roof Scan</div>
+                    <div class="addon-desc">CAA pilot UAV audit of chimney pots, parapets, valley gutters & leadwork</div>
+                  </div>
+                </div>
+                <div class="addon-price">+£120</div>
+              </label>
+
+              <label class="addon-item">
+                <div class="addon-left">
+                  <input type="checkbox" id="addon-thermal" data-price="95">
+                  <div>
+                    <div class="addon-name">FLIR Thermal Moisture & Insulation Bridge Scan</div>
+                    <div class="addon-desc">Infrared detection of hidden wall cold spots, missing cavity wool & pipe leaks</div>
+                  </div>
+                </div>
+                <div class="addon-price">+£95</div>
+              </label>
+
+              <label class="addon-item">
+                <div class="addon-left">
+                  <input type="checkbox" id="addon-flood" data-price="45">
+                  <div>
+                    <div class="addon-name">Environmental Desktop & Historical Subsidence Risk</div>
+                    <div class="addon-desc">British Geological Survey clay shrink data and Environment Agency flood models</div>
+                  </div>
+                </div>
+                <div class="addon-price">+£45</div>
+              </label>
+            </div>
+
+          </div>
+
+          <!-- Right Receipt Summary Box -->
+          <div class="calc-summary-box">
+            <div class="summary-header">
+              <h4 class="summary-title">Guaranteed Survey Quotation</h4>
+              <div class="summary-survey-type" id="summary-type-label">RICS Level 3 Full Building Survey</div>
+            </div>
+
+            <div class="summary-line">
+              <span>Standard Inspection Base Fee:</span>
+              <strong id="summary-base-fee">£875</strong>
+            </div>
+
+            <div class="summary-line">
+              <span>Selected Diagnostic Add-ons:</span>
+              <strong id="summary-addons-fee">£0</strong>
+            </div>
+
+            <div class="summary-line">
+              <span>VAT (20%):</span>
+              <strong id="summary-vat-fee">£175</strong>
+            </div>
+
+            <div class="summary-total-wrap">
+              <div class="summary-total-label">Fixed Quotation Total (Inc. VAT)</div>
+              <div class="summary-total-price" id="summary-total-fee">£1,050</div>
+              <div class="summary-vat-text">Guaranteed fixed fee. Valid for 30 days from generation.</div>
+            </div>
+
+            <button type="button" class="btn btn-primary btn-lg" id="btn-lock-quote" style="width: 100%;">
+              <span>Lock In This Quote & Book</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+
+            <div class="summary-perks">
+              <div class="summary-perk-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <span>Full telephone debrief with your MRICS surveyor on inspection day</span>
+              </div>
+              <div class="summary-perk-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <span>Comprehensive PDF report dispatched within 48 business hours</span>
+              </div>
+              <div class="summary-perk-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <span>Backed by £5,000,000 Professional Indemnity Insurance</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MASTER FOOTER -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1rem;">
+            <div class="brand-crest">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+            </div>
+            <div class="brand-text">
+              <span class="brand-title" style="color: #ffffff;">Chartered <span>Surveyor</span></span>
+              <span class="brand-tagline" style="color: var(--color-secondary-light);">RICS Regulated Independent Practice</span>
+            </div>
+          </a>
+          <p class="footer-brand-desc">
+            Independent Chartered Building Surveyors and RICS Registered Valuers providing residential home surveys, commercial dilapidations, and party wall dispute resolution across the UK.
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Home Surveys</h4>
+          <ul class="footer-links">
+            <li><a href="surveys.html#level1" class="footer-link">RICS Level 1 Condition</a></li>
+            <li><a href="surveys.html#level2" class="footer-link">RICS Level 2 Homebuyer</a></li>
+            <li><a href="surveys.html#level3" class="footer-link">RICS Level 3 Full Building</a></li>
+            <li><a href="fee-calculator.html" class="footer-link">Instant Fee Calculator</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Specialist Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#party-wall" class="footer-link">Party Wall etc. Act 1996</a></li>
+            <li><a href="services.html#dilapidations" class="footer-link">Commercial Dilapidations</a></li>
+            <li><a href="valuation.html#red-book" class="footer-link">RICS Red Book Valuations</a></li>
+            <li><a href="services.html#drone" class="footer-link">Drone Aerial Roof Surveys</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Contact Head Office</h4>
+          <p style="font-size: 0.88rem; color: var(--text-inverse-muted);">45 Berkeley Square, Mayfair, London W1J 5AS</p>
+          <p style="font-size: 0.88rem; color: #ffffff;"><strong>Direct:</strong> <a href="tel:+442079460920" style="color: #ffffff;">+44 (0)20 7946 0920</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Chartered Surveyor. All rights reserved. Regulated by RICS.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="about.html">RICS Regulations</a>
+          <a href="contact.html">Complaints Procedure</a>
+          <a href="contact.html">Terms of Engagement</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/survey-calculator.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
